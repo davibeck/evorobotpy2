@@ -302,6 +302,7 @@ class BulletPolicy(Policy):
     ):  # evaluate the policy for one or more episodes
         if nicheMaxsteps == None:
             nicheMaxsteps = self.maxsteps
+        print(nicheMaxsteps)
         rews = 0.0  # summed reward
         steps = 0  # steps performed
         if self.test == 2:
