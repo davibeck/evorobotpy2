@@ -77,10 +77,15 @@ class EvoAlgo(object):
         eval_rews, eval_length = self.policy.rollout(
             ntrials, render=True, seed=self.policy.get_seed + 100000
         )
-        """print(
+        fname = self.filedir + "/media" + str(self.seed) + ".csv"
+        fp = open(fname, "a")  # save summary
+
+        fp.write(
             "Postevauation: Average Fitness %.2f Total Steps %d"
             % (eval_rews, eval_length)
-        )"""
+        )
+
+        fp.close()
 
     def updateBest(
         self, fit, ind
