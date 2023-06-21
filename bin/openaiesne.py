@@ -194,8 +194,6 @@ class Algo(EvoAlgo):
                 self.policy.nn.normphase(
                     0
                 )  # normalization data is collected during the post-evaluation of the best sample of he previous generation
-                print(oniche)
-                print(self.niches[oniche])
                 eval_rews, eval_length = self.policy.rollout(
                     self.policy.ntrials,
                     seed=self.niches[oniche],
@@ -401,6 +399,7 @@ class Algo(EvoAlgo):
                     # cria a lista com as seed de acordo com o ntrials
                 ]
             )
+        #print(random_niches)
 
         self.niches = [0 for _ in range(self.number_niches)]
 
@@ -411,6 +410,9 @@ class Algo(EvoAlgo):
 
         while self.steps < self.maxsteps:
             for _ in range(self.numgens):
+                for nicho in self.niches:
+                    nicho[0] = random.randint(1, num_random_niches * 10)
+
                 self.intraniche()
 
             if remove_first_gen:
