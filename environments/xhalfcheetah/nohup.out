@@ -81,3 +81,31 @@ pybullet build time: Jun 20 2023 10:31:33
 pybullet build time: Jun 20 2023 10:31:33
 
 pybullet build time: Jun 20 2023 10:31:33
+PyBullet Halfcheetah-v5: reward = progress + (njoint_at_limit * -0.1), terminate also when z < 0.3
+-927.7990776619517
+argv[0]=
+argv[0]=
+PyBullet Halfcheetah-v5: reward = progress + (njoint_at_limit * -0.1), terminate also when z < 0.3
+-803.0562356499352
+argv[0]=
+argv[0]=
+PyBullet Halfcheetah-v5: reward = progress + (njoint_at_limit * -0.1), terminate also when z < 0.3
+-1061.4473465271626
+argv[0]=
+argv[0]=
+PyBullet Halfcheetah-v5: reward = progress + (njoint_at_limit * -0.1), terminate also when z < 0.3
+978.7131369583512
+argv[0]=
+argv[0]=
+PyBullet Halfcheetah-v5: reward = progress + (njoint_at_limit * -0.1), terminate also when z < 0.3
+975.6890419943738
+argv[0]=
+argv[0]=
+PyBullet Halfcheetah-v5: reward = progress + (njoint_at_limit * -0.1), terminate also when z < 0.3
+-1449.356094293967
+argv[0]=
+argv[0]=
+PyBullet Halfcheetah-v5: reward = progress + (njoint_at_limit * -0.1), terminate also when z < 0.3
+-733.3872315360134
+argv[0]=
+argv[0]=
