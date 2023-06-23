@@ -335,9 +335,11 @@ class Algo(EvoAlgo):
         self.cgen += 1
         self.storePerformance()
 
-    def interniche(self):
+    def interniche(self): 
         self.colonized = [False for _ in range(self.number_niches**2)]
         fitMatrix = np.zeros(shape=(self.number_niches, self.number_niches))
+        self.newCenters = self.centers[:]
+        hasColonized = False
 
         for niche in range(self.number_niches):
             for miche in range(self.number_niches):
@@ -352,17 +354,23 @@ class Algo(EvoAlgo):
             biche = np.argmax([fitMatrix[j][miche] for j in range(self.number_niches)])
             maxFit = fitMatrix[biche][miche]
 
+            
             if maxFit > self.fitness[miche]:
-                # print("Niche", biche + 1, "colonized niche", miche + 1)
                 self.colonized[miche] = biche
+                hasColonized = True
 
                 for i in range(self.number_niches):
                     fitMatrix[biche][i] = -99999999
 
                 # Replace i with o in niche m
                 self.fitness[miche] = maxFit
-                # Replace center of niche m with center of niche j
-                self.centers[miche] = self.centers[biche]
+
+                # Replace center of niche m with center of niche n
+                self.newCenters[miche] = self.centers[biche]
+
+        if hasColonized:
+            for niche in range(self.number_niches):
+                self.centers[niche] = self.newCenters[niche]
 
     def run(self):
         self.setProcess()  # initialize class variables
@@ -399,7 +407,6 @@ class Algo(EvoAlgo):
                     # cria a lista com as seed de acordo com o ntrials
                 ]
             )
-        #print(random_niches)
 
         self.niches = [0 for _ in range(self.number_niches)]
 
@@ -410,9 +417,6 @@ class Algo(EvoAlgo):
 
         while self.steps < self.maxsteps:
             for _ in range(self.numgens):
-                for nicho in self.niches:
-                    nicho[0] = random.randint(1, num_random_niches * 10)
-
                 self.intraniche()
 
             if remove_first_gen:
@@ -421,11 +425,9 @@ class Algo(EvoAlgo):
 
             self.bniche = np.argmax(self.fitness)
 
-            # print("Intraniche finished")
 
             self.interniche()
 
-            # print("Interniche finished")
 
             self.avgfit = np.average(self.fitness)
 
