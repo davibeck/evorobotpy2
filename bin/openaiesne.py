@@ -235,7 +235,8 @@ class Algo(EvoAlgo):
                 else:
                     self.policy.nn.normphase(0)
                 eval_rews, eval_length = self.policy.rollout(
-                    1, seed=(self.seed + 100000 + t)
+                    1, seed=(self.seed + 100000 + t),
+                    nicheMaxsteps=self.nicheMaxstep(oniche),
                 )
                 gfit += eval_rews
                 self.steps += eval_length
@@ -355,7 +356,7 @@ class Algo(EvoAlgo):
             maxFit = fitMatrix[biche][miche]
 
             
-            if maxFit > self.fitness[miche]:
+            if maxFit >= self.fitness[miche]:
                 self.colonized[miche] = biche
                 hasColonized = True
 

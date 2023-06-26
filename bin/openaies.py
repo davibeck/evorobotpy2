@@ -212,6 +212,8 @@ class Algo(EvoAlgo):
                 self.samplefitness[b * 2 + bb] = eval_rews
                 self.steps += eval_length
 
+        print(self.steps)
+
         fitness, self.index = ascendent_sort(self.samplefitness)  # sort the fitness
         self.avgfit = np.average(fitness)  # compute the average fitness
 
