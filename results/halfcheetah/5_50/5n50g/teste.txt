@@ -1,0 +1,16 @@
+O nicho  7  COlonizou o  0
+O nicho  9  COlonizou o  1
+O nicho  8  COlonizou o  2
+O nicho  4  COlonizou o  3
+O nicho  6  COlonizou o  4
+O nicho  5  COlonizou o  6
+O nicho  2  COlonizou o  7
+O nicho  3  COlonizou o  8
+O nicho  1  COlonizou o  9
+ 
+O nicho  9  COlonizou o  3
+O nicho  8  COlonizou o  4
+O nicho  3  COlonizou o  7
+O nicho  1  COlonizou o  8
+O nicho  0  COlonizou o  9
+ 
