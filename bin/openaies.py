@@ -407,7 +407,7 @@ class Algo(EvoAlgo):
             )
         )
 
-        while self.steps < self.maxsteps:
+        while self.steps < (self.maxsteps * 5):
             self.evaluate()  # evaluate samples
 
             self.optimize()  # estimate the gradient and move the centroid in the gradient direction

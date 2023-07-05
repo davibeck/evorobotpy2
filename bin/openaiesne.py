@@ -416,7 +416,7 @@ class Algo(EvoAlgo):
 
         remove_first_gen = 1
 
-        while self.steps < self.maxsteps:
+        while self.steps < (self.maxsteps * self.number_niches):
             for _ in range(self.numgens):
                 self.intraniche()
 

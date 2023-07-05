@@ -10,7 +10,7 @@ data = [davi_3n_50g,  brenda_3n_50g, larissa_333]
 fig, ax = plt.subplots()
 ax.boxplot(data)
 
-ax.set_xticklabels(['Davi 3-50', 'Brenda 3-50', 'Larissa 333'])
+ax.set_xticklabels(['DB-Es 3-50', 'OpenAi-Es-Ne 3-50', 'LA-Es 333'])
 ax.set_ylabel('Valores Fitness')
 
 plt.title('Boxplot - OpenAi-Es vs OpenAi-Es-Ne')
