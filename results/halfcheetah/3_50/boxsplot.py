@@ -10,9 +10,9 @@ data = [davi_3n_50g,  brenda_3n_50g, larissa_333]
 fig, ax = plt.subplots()
 ax.boxplot(data)
 
-ax.set_xticklabels(['DB-Es 3-50', 'OpenAi-Es-Ne 3-50', 'LA-Es 333'])
+ax.set_xticklabels(['DB-Es', 'OpenAi-Es-Ne', 'LA-Es'])
 ax.set_ylabel('Valores Fitness')
 
-plt.title('Boxplot - OpenAi-Es vs OpenAi-Es-Ne')
+plt.title('Boxplot - 3 niches')
 #plt.figure(figsize=)
 plt.savefig('3_50.png')

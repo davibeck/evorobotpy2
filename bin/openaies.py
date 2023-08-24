@@ -212,7 +212,6 @@ class Algo(EvoAlgo):
                 self.samplefitness[b * 2 + bb] = eval_rews
                 self.steps += eval_length
 
-        print(self.steps)
 
         fitness, self.index = ascendent_sort(self.samplefitness)  # sort the fitness
         self.avgfit = np.average(fitness)  # compute the average fitness
@@ -394,7 +393,7 @@ class Algo(EvoAlgo):
         elapsed = 0
         self.steps = 0
         print(
-            "Salimans: seed %d maxmsteps %d batchSize %d stepsize %lf noiseStdDev %lf wdecay %d symseed %d nparams %d"
+            "Salimans: seed %d maxmsteps %lf batchSize %d stepsize %lf noiseStdDev %lf wdecay %d symseed %d nparams %d"
             % (
                 self.seed,
                 self.maxsteps / 1000000,
@@ -407,7 +406,7 @@ class Algo(EvoAlgo):
             )
         )
 
-        while self.steps < (self.maxsteps * 5):
+        while self.steps < (self.maxsteps):
             self.evaluate()  # evaluate samples
 
             self.optimize()  # estimate the gradient and move the centroid in the gradient direction

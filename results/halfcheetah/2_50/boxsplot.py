@@ -6,15 +6,15 @@ larissa_500 = [1982.69, 2235.67, 2333.56, 2524.10, 684.58 , 1561.83, 1975.81, 16
 super_2n_50g = [1717.53, 1549.67, 1402.20, 2412.98, 1785.64, 2321.78, 2095.40, 22.52  , 2062.77, 2806.13]
 
 
-data = [davi_2n_50g,  brenda_2n_50g, larissa_500, super_2n_50g]
+data = [davi_2n_50g,  brenda_2n_50g, larissa_500]
 
 fig, ax = plt.subplots()
 ax.boxplot(data)
 
-ax.set_xticklabels(['DB-Es 2-50', 'OpenAi-Es-Ne 2-50', 'LA-Es 500', 'Super'])
+ax.set_xticklabels(['DB-Es', 'OpenAi-Es-Ne', 'LA-Es'])
 ax.set_ylabel('Valores Fitness')
 
-plt.title('Boxplot - OpenAi-Es vs OpenAi-Es-Ne')
+plt.title('Boxplot - 2 niches')
 #plt.figure(figsize=)
 plt.savefig('2_50.png')
 #plt.show()

@@ -273,10 +273,10 @@ class Policy(object):
                 found = 1
 
             if found == 0:
-                """print(
+                print(
                     "\033[1mOption %s in section [POLICY] of %s file is unknown\033[0m"
                     % (o, self.fileini)
-                )"""
+                )
                 sys.exit()
 
     @property
