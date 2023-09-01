@@ -197,7 +197,7 @@ class Algo(EvoAlgo):
                 eval_rews, eval_length = self.policy.rollout(
                     self.policy.ntrials,
                     seed=self.niches[oniche],
-                    nicheMaxsteps=self.nicheMaxstep(oniche),
+                    #nicheMaxsteps=self.nicheMaxstep(oniche),
                 )
                 self.samplefitness[b * 2 + bb] = eval_rews
                 self.steps += eval_length
@@ -236,7 +236,7 @@ class Algo(EvoAlgo):
                     self.policy.nn.normphase(0)
                 eval_rews, eval_length = self.policy.rollout(
                     1, seed=(self.seed + 100000 + t),
-                    nicheMaxsteps=self.nicheMaxstep(oniche),
+                    #nicheMaxsteps=self.nicheMaxstep(oniche),
                 )
                 gfit += eval_rews
                 self.steps += eval_length
@@ -416,9 +416,9 @@ class Algo(EvoAlgo):
 
         remove_first_gen = 1
 
-        new_maxsteps = 0
-        for niche in range (self.number_niches):
-            new_maxsteps += self.nicheMaxstep(niche) / self.policy.maxsteps
+        new_maxsteps = 1
+        """for niche in range (self.number_niches):
+            new_maxsteps += self.nicheMaxstep(niche) / self.policy.maxsteps"""
 
         print(new_maxsteps)
         

@@ -43,7 +43,7 @@ class Algo(EvoAlgo):
             for o in options:
                 found = 0
                 if o == "maxmsteps":
-                    self.maxsteps = config.getint("ALGO", "maxmsteps") * 1000000
+                    self.maxsteps = config.getint("ALGO", "maxmsteps") * 1000000 * 5.5
                     found = 1
                 if o == "stepsize":
                     self.stepsize = config.getfloat("ALGO", "stepsize")

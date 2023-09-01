@@ -1,0 +1,51 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+PyBullet Humanoid-v5: reward = progress + 1.0 + (jexcess * -10.0) + (nJLimits * -0.1) + (angleoffset * -0.1): init_range [-0.03,0.03]
+1
+848.7355889321248
+PyBullet Humanoid-v5: reward = progress + 1.0 + (jexcess * -10.0) + (nJLimits * -0.1) + (angleoffset * -0.1): init_range [-0.03,0.03]
+1
+830.5685104986823
+PyBullet Humanoid-v5: reward = progress + 1.0 + (jexcess * -10.0) + (nJLimits * -0.1) + (angleoffset * -0.1): init_range [-0.03,0.03]
+1
+816.7005326272533
+PyBullet Humanoid-v5: reward = progress + 1.0 + (jexcess * -10.0) + (nJLimits * -0.1) + (angleoffset * -0.1): init_range [-0.03,0.03]
+1
+831.6587180386618
+PyBullet Humanoid-v5: reward = progress + 1.0 + (jexcess * -10.0) + (nJLimits * -0.1) + (angleoffset * -0.1): init_range [-0.03,0.03]
+1
+757.774260585086
+PyBullet Humanoid-v5: reward = progress + 1.0 + (jexcess * -10.0) + (nJLimits * -0.1) + (angleoffset * -0.1): init_range [-0.03,0.03]
+1
+857.980426286645
+PyBullet Humanoid-v5: reward = progress + 1.0 + (jexcess * -10.0) + (nJLimits * -0.1) + (angleoffset * -0.1): init_range [-0.03,0.03]
+1
+843.4882051285382
+PyBullet Humanoid-v5: reward = progress + 1.0 + (jexcess * -10.0) + (nJLimits * -0.1) + (angleoffset * -0.1): init_range [-0.03,0.03]
+1
+839.7426634540366
+PyBullet Humanoid-v5: reward = progress + 1.0 + (jexcess * -10.0) + (nJLimits * -0.1) + (angleoffset * -0.1): init_range [-0.03,0.03]
+1
+830.318856600764
+PyBullet Humanoid-v5: reward = progress + 1.0 + (jexcess * -10.0) + (nJLimits * -0.1) + (angleoffset * -0.1): init_range [-0.03,0.03]
+1
+842.4262207747006
