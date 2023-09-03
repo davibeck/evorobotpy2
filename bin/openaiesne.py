@@ -44,6 +44,7 @@ class Algo(EvoAlgo):
             self.saveeach = 60
             self.number_niches = 2
             self.numgens = 85
+            self.newCgen = []
             options = config.options("ALGO")
             for o in options:
                 found = 0
@@ -196,9 +197,13 @@ class Algo(EvoAlgo):
                 )  # normalization data is collected during the post-evaluation of the best sample of he previous generation
                 eval_rews, eval_length = self.policy.rollout(
                     self.policy.ntrials,
-                    seed=self.niches[oniche],
-                    #nicheMaxsteps=self.nicheMaxstep(oniche),
+                    seed=((self.niches[oniche][0] + self.newCgen[oniche] * self.batchSize) + b),
+                    nicheMaxsteps=self.nicheMaxstep(oniche),
                 )
+                #Caso precise fazer a variação ambiental a cada iteração, usar formula abaixo
+                #
+                # (b,(self.niches[oniche][0] + self.newCgen[oniche] * self.batchSize) + b)
+                
                 self.samplefitness[b * 2 + bb] = eval_rews
                 self.steps += eval_length
 
@@ -236,7 +241,7 @@ class Algo(EvoAlgo):
                     self.policy.nn.normphase(0)
                 eval_rews, eval_length = self.policy.rollout(
                     1, seed=(self.seed + 100000 + t),
-                    #nicheMaxsteps=self.nicheMaxstep(oniche),
+                    nicheMaxsteps=self.nicheMaxstep(oniche),
                 )
                 gfit += eval_rews
                 self.steps += eval_length
@@ -318,6 +323,7 @@ class Algo(EvoAlgo):
 
     def intraniche(self):
         for niche in range(self.number_niches):
+            self.newCgen[niche] += 1
             self.evaluate(niche)  # evaluate samples
             self.optimize(
                 niche
@@ -410,9 +416,11 @@ class Algo(EvoAlgo):
             )
 
         self.niches = [0 for _ in range(self.number_niches)]
+        self.newCgen = [0 for _ in range(self.number_niches)]
 
         for niche in range(self.number_niches):
             self.niches[niche] = random_niches[niche]
+            self.newCgen[niche] = 0
 
         remove_first_gen = 1
 
@@ -420,11 +428,12 @@ class Algo(EvoAlgo):
         """for niche in range (self.number_niches):
             new_maxsteps += self.nicheMaxstep(niche) / self.policy.maxsteps"""
 
-        print(new_maxsteps)
+        #print(new_maxsteps)
         
         while self.steps < (self.maxsteps * new_maxsteps):
+
             for _ in range(self.numgens):
-                self.intraniche()
+                self.intraniche() #evaluate
 
             if remove_first_gen:
                 self.cgen -= 1
