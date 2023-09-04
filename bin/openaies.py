@@ -209,6 +209,7 @@ class Algo(EvoAlgo):
                     self.policy.ntrials,
                     seed=(self.seed + (self.cgen * self.batchSize) + b),
                 )
+                #print(b, (self.seed + (self.cgen * self.batchSize) + b))
                 self.samplefitness[b * 2 + bb] = eval_rews
                 self.steps += eval_length
 

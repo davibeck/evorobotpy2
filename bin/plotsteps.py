@@ -80,11 +80,7 @@ if len(sys.argv) == 1:
         stat = np.resize(stat, newsize)
         new_x = np.linspace(minmax[fint - 1][0], minmax[fint - 1][1], 100)
         new_y = np.interp(new_x, stat[:, 0].astype(float), stat[:, 2].astype(float))
-        if fint < 3:
-            ave_es.append([new_x, new_y])
-        elif fint < 6:
-            ave_esnedavi.append([new_x, new_y])
-        elif fint < 11:
+        if fint < 11:
             ave_esne.append([new_x, new_y])
         elif fint < 16:
             ave_ne.append([new_x, new_y])
