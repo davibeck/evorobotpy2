@@ -198,7 +198,7 @@ class Algo(EvoAlgo):
                 eval_rews, eval_length = self.policy.rollout(
                     self.policy.ntrials,
                     seed=(self.niches[oniche]),
-                    #nicheMaxsteps=self.nicheMaxstep(oniche),
+                    nicheMaxsteps=self.nicheMaxstep(oniche),
                 )
                 #Caso precise fazer a variação ambiental a cada iteração, usar formula abaixo
                 #
@@ -241,7 +241,7 @@ class Algo(EvoAlgo):
                     self.policy.nn.normphase(0)
                 eval_rews, eval_length = self.policy.rollout(
                     1, seed=(self.seed + 100000 + t),
-                    #nicheMaxsteps=self.nicheMaxstep(oniche),
+                    nicheMaxsteps=self.nicheMaxstep(oniche),
                 )
                 gfit += eval_rews
                 self.steps += eval_length
