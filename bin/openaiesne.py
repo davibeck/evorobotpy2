@@ -197,7 +197,7 @@ class Algo(EvoAlgo):
                 )  # normalization data is collected during the post-evaluation of the best sample of he previous generation
                 eval_rews, eval_length = self.policy.rollout(
                     self.policy.ntrials,
-                    seed=(self.niches[oniche]),
+                    seed=(self.niches[oniche][0] + (self.newCgen[oniche] * self.batchSize) + b),
                     nicheMaxsteps=self.nicheMaxstep(oniche),
                 )
                 #Caso precise fazer a variação ambiental a cada iteração, usar formula abaixo
