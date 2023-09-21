@@ -33,7 +33,7 @@ data = [[brenda2, davi2,  larissa2, super_davi2, super_larissa2],
 
 fig, axes = plt.subplots(2, 2, figsize=(15, 10)) 
 
-fig.suptitle('Boxplot - Hopper')
+fig.suptitle('Boxplot - Walker')
 
 axes[0, 0].set_title('2 Niches')
 sea = sns.boxplot(ax=axes[0, 0], data=data[0], width=(0.5), linewidth=(0.95))
