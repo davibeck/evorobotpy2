@@ -55,4 +55,5 @@ sea = sns.boxplot(ax=axes[1, 1], data=data[3], width=(0.5), linewidth=(0.95))
 sea.set(xticklabels=['OpenAi-ES-NE', 'DB-ES', 'LA-ES', 'DB-SP', 'LA-SP'])
 sea.set_ylim([0, 2500])
 
+
 plt.savefig('hopper.png')
