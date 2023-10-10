@@ -8,7 +8,7 @@ larissa_500 = [1982.69, 2235.67, 2333.56, 2524.10, 684.58 , 1561.83, 1975.81, 16
 
 davi_3n_50g = [2626.66, 2122.09, 2185.25, 639.55, 1819.46, 1991.76, 1619.81, 2616.79, 2282.71, 1537.18]
 brenda_3n_50g = [2307.02, 15.11, 14.67, 844.06, 1935.48, 1909.44, 1243.27, 2336.71, 2437.67, 1644.63]
-random = [15.66  , 764.08 , 2192.59, 2586.86, 2513.57, 2267.97, 1351.68, 2289.44, 2352.87, 2489.71]
+#random = [15.66  , 764.08 , 2192.59, 2586.86, 2513.57, 2267.97, 1351.68, 2289.44, 2352.87, 2489.71]
 larissa_333 = [1558.69, 2323.05, 2665.83, 1912.86, 2647.51, 1607.58, 1052.73, 1231.22, 1001.41, 1861.34]
 
 davi_5n_50g = [2096.79, 1882.49, 1708.87, 1761.49, 16.46, 1542.16, 1407.60, 2253.80, 2245.84, 1437.40]
@@ -23,7 +23,7 @@ larissa_100 = [840.33, 2555.51, 2274.35, 1252.90, 2191.86, 1735.66, 2871.30, 283
 
 
 data = [[brenda_2n_50g, davi_2n_50g, larissa_500],
-        [brenda_3n_50g, davi_3n_50g, random, larissa_333],
+        [brenda_3n_50g, davi_3n_50g, larissa_333],
         [brenda_5n_50g, davi_5n_50g, larissa_500],
         [brenda_10n_50g, davi_10n_50g, larissa_100]]
 
@@ -34,20 +34,24 @@ fig.suptitle('Boxplot - HalfCheetah')
 axes[0, 0].set_title('2 Niches')
 sea = sns.boxplot(ax=axes[0, 0], data=data[0], width=(0.5), linewidth=(0.95))
 sea.set(xticklabels=['OpenAi-ES-NE', 'DB-ES', 'LA-ES'])
+sea.set_ylabel('Fitness')
 sea.set_ylim([0, 3000])
 
 axes[0, 1].set_title('3 Niches')
 sea = sns.boxplot(ax=axes[0, 1], data=data[1], width=(0.5), linewidth=(0.95))
-sea.set(xticklabels=['OpenAi-ES-NE', 'DB-ES', 'DB-ES-R' , 'LA-ES'])
+sea.set(xticklabels=['OpenAi-ES-NE', 'DB-ES' , 'LA-ES'])
+sea.set_ylabel('Fitness')
 sea.set_ylim([0, 3000])
 
 axes[1, 0].set_title('5 Niches')
 sea = sns.boxplot(ax=axes[1, 0], data=data[2], width=(0.5), linewidth=(0.95))
 sea.set(xticklabels=['OpenAi-ES-NE', 'DB-ES', 'LA-ES'])
+sea.set_ylabel('Fitness')
 sea.set_ylim([0, 3000])
 
 axes[1, 1].set_title('10 Niches')
 sea = sns.boxplot(ax=axes[1, 1], data=data[3], width=(0.5), linewidth=(0.95))
 sea.set(xticklabels=['OpenAi-ES-NE', 'DB-ES', 'LA-ES'])
+sea.set_ylabel('Fitness')
 
 plt.savefig('halfcheetah.png')

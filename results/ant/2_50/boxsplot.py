@@ -12,7 +12,7 @@ data = [brenda,  davi, random_davi, larissa, super_davi, super_larissa]
 fig, ax = plt.subplots()
 ax.boxplot(data)
 
-ax.set_xticklabels(['OpenAi-ES-NE', 'DB-ES', 'Random', 'LA-ES', 'DB-SP', 'LA-SP'])
+ax.set_xticklabels(['OpenAi-ES-NE', 'DB-ES', 'RDB-Es', 'LA-ES', 'DB-SP', 'LA-SP'])
 ax.set_ylabel('Valores Fitness')
 
 plt.title('Boxplot - Ant - 2 niches')

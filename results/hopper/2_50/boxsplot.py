@@ -7,15 +7,15 @@ random_davi = [1574.62, 1522.07, 1906.55, 1698.16, 2092.44, 1349.22, 1441.61, 17
 super_davi = [1309.40, 1711.05, 1147.97, 1062.49, 1415.73, 1509.84, 3.97   , 1438.10, 2067.40, 1979.26]
 super_larissa = [1311.60, 1339.94, 1525.89, 1794.36, 1528.63, 1721.22, 1823.29, 2009.18, 1831.85, 1693.03]
 
-data = [brenda,  davi, larissa, random_davi, super_davi, super_larissa]
+data = [brenda,  davi, random_davi, larissa, super_davi, super_larissa]
 
 fig, ax = plt.subplots()
 ax.boxplot(data)
 
-ax.set_xticklabels(['OpenAi-ES-NE', 'DB-ES', 'LA-ES', 'RANDOM', 'DB-SP', 'LA-SP'])
+ax.set_xticklabels(['OpenAi-ES-NE', 'DB-ES','RDB-Es', 'LA-ES', 'DB-SP', 'LA-SP'])
 ax.set_ylabel('Valores Fitness')
 
-plt.title('Boxplot - Hopper - 2 niches')
+plt.title('Boxplot - Hopper - 2 Niches')
 #plt.figure(figsize=)
-plt.savefig('hopper_2_50.png')
-#plt.show()
+#plt.savefig('hopper_2_50.png')
+plt.show()

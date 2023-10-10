@@ -29,30 +29,34 @@ super_larissa10 = [115.23, 108.48, 118.78, 105.96, 89.56, 92.35, 105.24, 85.52, 
 data = [[brenda2, davi2,  larissa2, super_davi2, super_larissa2],
         [brenda3, davi3, larissa3, super_davi3, super_larissa3],
         [brenda5, davi5, larissa5, super_davi5, super_larissa5],
-        [brenda10, davi10, random_davi10, larissa10, super_davi10, super_larissa10]]
+        [brenda10, davi10, larissa10, super_davi10, super_larissa10]]
 
 fig, axes = plt.subplots(2, 2, figsize=(15, 10)) 
 
-fig.suptitle('Boxplot - Hopper')
+fig.suptitle('Boxplot - Humanoid')
 
 axes[0, 0].set_title('2 Niches')
 sea = sns.boxplot(ax=axes[0, 0], data=data[0], width=(0.5), linewidth=(0.95))
-sea.set(xticklabels=['OpenAi-ES-NE', 'DB-ES', 'LA-ES', 'DB-SP', 'LA-SP'])
+sea.set(xticklabels=['OpenAiES-NE', 'DB-ES', 'LA-ES', 'DB-SP', 'LA-SP'])
+sea.set_ylabel('Fitness')
 sea.set_ylim([0, 200])
 
 axes[0, 1].set_title('3 Niches')
 sea = sns.boxplot(ax=axes[0, 1], data=data[1], width=(0.5), linewidth=(0.95))
-sea.set(xticklabels=['OpenAi-ES-NE', 'DB-ES', 'LA-ES', 'DB-SP', 'LA-SP'])
+sea.set(xticklabels=['OpenAiES-NE', 'DB-ES', 'LA-ES', 'DB-SP', 'LA-SP'])
+sea.set_ylabel('Fitness')
 sea.set_ylim([0, 200])
 
 axes[1, 0].set_title('5 Niches')
 sea = sns.boxplot(ax=axes[1, 0], data=data[2], width=(0.5), linewidth=(0.95))
-sea.set(xticklabels=['OpenAi-ES-NE', 'DB-ES', 'LA-ES', 'DB-SP', 'LA-SP'])
+sea.set(xticklabels=['OpenAiES-NE', 'DB-ES', 'LA-ES', 'DB-SP', 'LA-SP'])
+sea.set_ylabel('Fitness')
 sea.set_ylim([0, 200])
 
 axes[1, 1].set_title('10 Niches')
 sea = sns.boxplot(ax=axes[1, 1], data=data[3], width=(0.5), linewidth=(0.95))
-sea.set(xticklabels=['OpenAi-ES-NE', 'DB-ES', 'DB-ES-R', 'LA-ES', 'DB-SP', 'LA-SP'])
+sea.set(xticklabels=['OpenAiES-NE', 'DB-ES', 'LA-ES', 'DB-SP', 'LA-SP'])
+sea.set_ylabel('Fitness')
 sea.set_ylim([0, 200])
 
 plt.savefig('humanoid.png')

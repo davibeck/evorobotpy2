@@ -6,12 +6,12 @@ random = [15.66  , 764.08 , 2192.59, 2586.86, 2513.57, 2267.97, 1351.68, 2289.44
 larissa_333 = [1558.69, 2323.05, 2665.83, 1912.86, 2647.51, 1607.58, 1052.73, 1231.22, 1001.41, 1861.34]
 
 
-data = [davi_3n_50g,random,  brenda_3n_50g, larissa_333]
+data = [brenda_3n_50g, davi_3n_50g,random, larissa_333]
 
 fig, ax = plt.subplots()
 ax.boxplot(data)
 
-ax.set_xticklabels(['DB-Es','Random', 'OpenAi-Es-Ne', 'LA-Es'])
+ax.set_xticklabels(['OpenAi-Es-Ne', 'DB-Es','RDB-Es', 'LA-Es'])
 ax.set_ylabel('Valores Fitness')
 
 plt.title('Boxplot - 3 niches')

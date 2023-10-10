@@ -4,7 +4,7 @@ import seaborn as sns
 
 brenda = [569.79 , 967.32 , 73.61  , 13.81  , 1078.41, 745.15 , 916.23 , 5.91 , 1010.00, 301.26 ]
 davi = [897.15 , 714.81 , 1292.23, 1446.27, 661.58 , 17.92  , 57.24  , -2.33  , 923.54 , 1136.67]
-random_davi = [706.64 , 1476.61, 702.85 , 1251.74, 441.51 , 10.39  , 75.43  , 1108.53, 724.01 , 1006.32]
+#random_davi = [706.64 , 1476.61, 702.85 , 1251.74, 441.51 , 10.39  , 75.43  , 1108.53, 724.01 , 1006.32]
 larissa = [802.03 , 459.78 , 832.09 , 993.79 , 1099.31, 1544.66, 1053.97, 676.16 , 30.99  , 1222.83]
 super_davi = [1075.94, 299.93 , 905.49 , 1211.24, -43.59 , 992.92 , 1197.40, 562.78 , 1239.50, 1323.91]
 super_larissa = [1668.10, 877.70 , 1409.08, 623.21 , 1467.29, 745.22 , 981.61 , 1473.59, 991.49 , 792.80 ]
@@ -28,7 +28,7 @@ super_davi10 = [1148.55 ,1232.64 ,1325.25 ,1113.42 ,1779.86 ,1049.20 ,1247.03 ,1
 super_larissa10 = [2177.77, 2452.94, 1895.77, 2076.73, 2284.56, 2111.33, 2382.91, 2411.67, 1876.22, 2400.18]
 
 
-data = [[brenda,  davi, random_davi, larissa, super_davi, super_larissa],
+data = [[brenda,  davi, larissa, super_davi, super_larissa],
         [brenda2,  davi2, larissa2, super_davi2, super_larissa2],
         [brenda5,  davi5, larissa5, super_davi5, super_larissa5],
         [brenda10,  davi10, larissa10, super_davi10, super_larissa10]]
@@ -39,7 +39,7 @@ fig.suptitle('Boxplot - Ant')
 
 axes[0, 0].set_title('2 Niches')
 sea = sns.boxplot(ax=axes[0, 0], data=data[0], width=(0.5), linewidth=(0.95))
-sea.set(xticklabels=['OpenAi-ES-NE', 'DB-ES','DB-ES-R', 'LA-ES', 'DB-SP', 'LA-SP'])
+sea.set(xticklabels=['OpenAi-ES-NE', 'DB-ES', 'LA-ES', 'DB-SP', 'LA-SP'])
 sea.set_ylim([0, 2500])
 
 axes[0, 1].set_title('3 Niches')

@@ -4,7 +4,7 @@ import seaborn as sns
 brenda2 = [24.84  , 1281.87, 1192.89, 1588.59, 1523.10, 834.65 , 1425.22, 971.58 , 1938.87, 1545.74]
 davi2 = [1099.09, 1515.24, 1726.76, 1514.44, 1387.73, 1907.77, 1454.61, 1441.08, 16.06  , 1723.47]
 larissa2 = [1119.49, 1300.68, 2000.04, 1385.62, 1965.39, 1275.55, 27.38  , 940.57 , 1824.46, 2123.31]
-random_davi2 = [1574.62, 1522.07, 1906.55, 1698.16, 2092.44, 1349.22, 1441.61, 1721.40, 1620.04, 1775.66]
+#random_davi2 = [1574.62, 1522.07, 1906.55, 1698.16, 2092.44, 1349.22, 1441.61, 1721.40, 1620.04, 1775.66]
 super_davi2 = [1309.40, 1711.05, 1147.97, 1062.49, 1415.73, 1509.84, 3.97   , 1438.10, 2067.40, 1979.26]
 super_larissa2 = [1311.60, 1339.94, 1525.89, 1794.36, 1528.63, 1721.22, 1823.29, 2009.18, 1831.85, 1693.03]
 
@@ -26,7 +26,7 @@ larissa10 = [1691.02, 1953.19, 1652.34, 1627.58, 1618.62, 1815.49, 1999.38, 1859
 super_davi10 = [1509.52, 1649.77, 1975.61, 1765.82, 1662.44, 1492.95, 1811.15, 1963.10, 2010.98, 2319.25]
 super_larissa10 = [1687.19, 1865.10, 2001.02, 2051.33, 1913.84, 1373.45, 1903.17, 2123.76, 1837.16, 2139.66]
 
-data = [[brenda2, davi2,random_davi2,  larissa2, super_davi2, super_larissa2],
+data = [[brenda2, davi2,  larissa2, super_davi2, super_larissa2],
         [brenda3, davi3, larissa3, super_davi3, super_larissa3],
         [brenda5, davi5, larissa5, super_davi5, super_larissa5],
         [brenda10, davi10, larissa10, super_davi10, super_larissa10]]
@@ -37,22 +37,26 @@ fig.suptitle('Boxplot - Hopper')
 
 axes[0, 0].set_title('2 Niches')
 sea = sns.boxplot(ax=axes[0, 0], data=data[0], width=(0.5), linewidth=(0.95))
-sea.set(xticklabels=['OpenAi-ES-NE', 'DB-ES','DB-ES-R', 'LA-ES', 'DB-SP', 'LA-SP'])
+sea.set(xticklabels=['OpenAi-ES-NE', 'DB-ES', 'LA-ES', 'DB-SP', 'LA-SP'])
+sea.set_ylabel('Fitness')
 sea.set_ylim([0, 2500])
 
 axes[0, 1].set_title('3 Niches')
 sea = sns.boxplot(ax=axes[0, 1], data=data[1], width=(0.5), linewidth=(0.95))
 sea.set(xticklabels=['OpenAi-ES-NE', 'DB-ES', 'LA-ES', 'DB-SP', 'LA-SP'])
+sea.set_ylabel('Fitness')
 sea.set_ylim([0, 2500])
 
 axes[1, 0].set_title('5 Niches')
 sea = sns.boxplot(ax=axes[1, 0], data=data[2], width=(0.5), linewidth=(0.95))
 sea.set(xticklabels=['OpenAi-ES-NE', 'DB-ES', 'LA-ES', 'DB-SP', 'LA-SP'])
+sea.set_ylabel('Fitness')
 sea.set_ylim([0, 2500])
 
 axes[1, 1].set_title('10 Niches')
 sea = sns.boxplot(ax=axes[1, 1], data=data[3], width=(0.5), linewidth=(0.95))
 sea.set(xticklabels=['OpenAi-ES-NE', 'DB-ES', 'LA-ES', 'DB-SP', 'LA-SP'])
+sea.set_ylabel('Fitness')
 sea.set_ylim([0, 2500])
 
 

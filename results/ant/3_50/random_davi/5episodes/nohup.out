@@ -1,0 +1,60 @@
+
+pybullet build time: May  1 2023 12:33:41
+
+pybullet build time: May  1 2023 12:33:41
+
+pybullet build time: May  1 2023 12:33:41
+
+pybullet build time: May  1 2023 12:33:41
+
+pybullet build time: May  1 2023 12:33:41
+
+pybullet build time: May  1 2023 12:33:41
+
+pybullet build time: May  1 2023 12:33:41
+
+pybullet build time: May  1 2023 12:33:41
+
+pybullet build time: May  1 2023 12:33:41
+
+pybullet build time: May  1 2023 12:33:41
+ByBullet Ant-v5: reward = progress + 0.01 + (torque_cost * -0.01) + (nJointLimit * -0.1)
+-22.20572232307825
+argv[0]=
+argv[0]=
+ByBullet Ant-v5: reward = progress + 0.01 + (torque_cost * -0.01) + (nJointLimit * -0.1)
+-45.139947579793215
+argv[0]=
+argv[0]=
+ByBullet Ant-v5: reward = progress + 0.01 + (torque_cost * -0.01) + (nJointLimit * -0.1)
+-255.78263958918592
+argv[0]=
+argv[0]=
+ByBullet Ant-v5: reward = progress + 0.01 + (torque_cost * -0.01) + (nJointLimit * -0.1)
+-360.46572792945335
+argv[0]=
+argv[0]=
+ByBullet Ant-v5: reward = progress + 0.01 + (torque_cost * -0.01) + (nJointLimit * -0.1)
+-137.74857914159838
+argv[0]=
+argv[0]=
+ByBullet Ant-v5: reward = progress + 0.01 + (torque_cost * -0.01) + (nJointLimit * -0.1)
+-388.30000940916693
+argv[0]=
+argv[0]=
+ByBullet Ant-v5: reward = progress + 0.01 + (torque_cost * -0.01) + (nJointLimit * -0.1)
+-707.0598082688305
+argv[0]=
+argv[0]=
+ByBullet Ant-v5: reward = progress + 0.01 + (torque_cost * -0.01) + (nJointLimit * -0.1)
+-248.93500899731293
+argv[0]=
+argv[0]=
+ByBullet Ant-v5: reward = progress + 0.01 + (torque_cost * -0.01) + (nJointLimit * -0.1)
+367.9459972788658
+argv[0]=
+argv[0]=
+ByBullet Ant-v5: reward = progress + 0.01 + (torque_cost * -0.01) + (nJointLimit * -0.1)
+-551.1867519350435
+argv[0]=
+argv[0]=
