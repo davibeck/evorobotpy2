@@ -12,10 +12,9 @@ data = [brenda,  davi, random_davi, larissa, super_davi, super_larissa]
 fig, ax = plt.subplots()
 ax.boxplot(data)
 
-ax.set_xticklabels(['OpenAi-ES-NE', 'DB-ES', 'RDB-Es' 'LA-ES', 'DB-SP', 'LA-SP'])
+ax.set_xticklabels(['OpenAi-ES-NE', 'FixedSeed-NE', 'RandSeed-NE', 'LA-ES', 'FixedSeed-NE-SP', 'LA-SP'])
 ax.set_ylabel('Valores Fitness')
-
+fig.set_figwidth(9)
 plt.title('Boxplot - Hopper - 3 niches')
-#plt.figure(figsize=)
 plt.savefig('hopper_3_50.png')
 #plt.show()

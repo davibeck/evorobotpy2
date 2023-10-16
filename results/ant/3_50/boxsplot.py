@@ -1,20 +1,22 @@
 import matplotlib.pyplot as plt
 
-brenda2 = [-3.97  , 1383.64, 876.14 , 806.64 , 12.00  , 41.79  , 71.94  , 922.53 , 587.43 , 947.58 ]
-davi2 = [959.29 , 402.03 , 24.88  , 934.61 , 23.99  , 30.69  , 200.19 , 1303.07, 751.27 , 883.58 ]
-larissa2 = [293.90 , 1214.84, 534.91 , 638.72 , 1752.58, 23.67  , 1062.83, 1055.44, 1288.65, 1109.48]
-super_davi2 = [1504.18, 400.26 , 1465.00, 1034.55, 1797.58, 946.51 , 899.04 , 1618.91, 1797.89, 1737.46]
-super_larissa2 = [1494.09, 956.88 , 1636.86, 1336.67, 1199.77, 926.09 , 1160.42, 1558.24, 1280.56, 2256.17, 1680.66]
+brenda3 = [-3.97  , 1383.64, 876.14 , 806.64 , 12.00  , 41.79  , 71.94  , 922.53 , 587.43 , 947.58 ]
+davi3 = [959.29 , 402.03 , 24.88  , 934.61 , 23.99  , 30.69  , 200.19 , 1303.07, 751.27 , 883.58 ]
+rand = [811.61, 1331.04, 416.88, 1115.72, 1615.40, 708.64, 479.88, 1366.88, 1188.54, 1337.45]
+larissa3 = [293.90 , 1214.84, 534.91 , 638.72 , 1752.58, 23.67  , 1062.83, 1055.44, 1288.65, 1109.48]
+super_davi3 = [1504.18, 400.26 , 1465.00, 1034.55, 1797.58, 946.51 , 899.04 , 1618.91, 1797.89, 1737.46]
+super_larissa3 = [1494.09, 956.88 , 1636.86, 1336.67, 1199.77, 926.09 , 1160.42, 1558.24, 1280.56, 2256.17, 1680.66]
 
-data = [brenda2,  davi2, larissa2, super_davi2, super_larissa2]
+data = [brenda3,  davi3, rand, larissa3, super_davi3, super_larissa3]
 
 fig, ax = plt.subplots()
+fig.set_figwidth(9)
 ax.boxplot(data)
 
-ax.set_xticklabels(['OpenAi-ES-NE', 'DB-ES', 'LA-ES', 'DB-SP', 'LA-SP'])
+ax.set_xticklabels(['OpenAi-ES-NE', 'FixedSeed-NE', 'RandSeed-NE', 'LA-ES', 'FixedSeed-NE-SP', 'LA-SP'])
 ax.set_ylabel('Valores Fitness')
 
-plt.title('Boxplot - Ant - 2 niches')
+plt.title('Boxplot - Ant - 3 niches')
 #plt.figure(figsize=)
-plt.savefig('ant_2_50.png')
+plt.savefig('ant_3_50.png')
 #plt.show()
